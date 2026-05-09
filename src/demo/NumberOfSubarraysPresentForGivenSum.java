@@ -20,6 +20,7 @@ public class NumberOfSubarraysPresentForGivenSum {
                     if(sums.size()>1){
                         ans.add(sums);
                     }
+
                 }
             }
         }

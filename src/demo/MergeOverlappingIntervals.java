@@ -14,6 +14,8 @@ public class MergeOverlappingIntervals {
 
        for(int[] ar:arr){
 
+           //  {1, 3}, {2, 6}, {8, 15}, {10, 18}
+
            if(list.isEmpty() || list.get(list.size()-1).get(1) < ar[0]){
 
                list.add(Arrays.asList(ar[0], ar[1]));
@@ -36,7 +38,7 @@ public class MergeOverlappingIntervals {
 
         int[][] intervals = {
 
-                {1, 3}, {2, 6}, {8, 15}, {10, 18}
+                {1, 3}, {4, 6}, {8, 15}, {10, 18}
         };
 
         List<List<Integer>>ans=solve(intervals);
