@@ -8,7 +8,7 @@ public class MaxSumOfArray {
 
         int start=0, arrStart=0, arrEnd=0;
 
-        for(int i=0;i<nums.length-1;i++){
+        for(int i=0;i<nums.length;i++){
 
             if(sum==0){
                 start=i;
@@ -41,7 +41,8 @@ public class MaxSumOfArray {
     static void main(String[] args) {
 
         int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        int ans=solve(arr);
+        int[] arr1=  {5,4,-1,7,8};
+        int ans=solve(arr1);
         System.out.println(ans);
     }
 }
