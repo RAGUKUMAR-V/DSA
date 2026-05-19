@@ -27,7 +27,6 @@ public class SubArrayForGivenSum {
         for(int i=0;i<arr.length-1;i++){
             int sum=0;
             for(int j=i;j<arr.length-1;j++){
-
                 sum=sum+arr[j];
                 if(sum==tar){
                     if(!list.isEmpty()){

@@ -54,6 +54,7 @@ public class LongestCommonPrefix {
 
 
         String[] input = {"interview", "internet", "internal", "interval"};
+        String[] input1 = {"rnterview", "internet", "internal", "interval"};
         String result = solve2(input);
         System.out.println("Longest Common Prefix: " + result);
 

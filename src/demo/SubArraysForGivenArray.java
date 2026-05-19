@@ -17,12 +17,31 @@ public class SubArraysForGivenArray {
 
     }
 
+    public static List<List<Integer>> solve2(List<Integer> arr){
+        List<List<Integer>>list=new ArrayList<>();
+
+        for(int i=0;i<arr.size();i++){
+            for(int j=i;j< arr.size();j++){
+                list.add(arr.subList(i,j+1));
+            }
+        }
+        return list;
+
+    }
+
 
     public static void main(String[] args) {
         int[] array={1,2,3};
+        List<Integer>lis=Arrays.asList(1,2,3,4,5);
         List<int[]>ans=solve(array);
+        List<List<Integer>>ans2=solve2(lis);
+
         for(int[] an:ans){
             System.out.println(Arrays.toString(an));
+        }
+
+        for(List<Integer> an:ans2){
+            System.out.println((an));
         }
 
     }
