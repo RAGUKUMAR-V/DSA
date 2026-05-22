@@ -35,7 +35,7 @@ public class SecondandThirdMaxOccuranceOfCharacter {
          2. If same frequency, preserve insertion order
             (LinkedHashMap already keeps first appearance order)
         */
-        list.sort((a, b) -> b.getValue() - a.getValue());
+       list.sort((a, b) -> b.getValue() - a.getValue());
 
         // 2nd and 3rd most repeating characters
         char second = list.get(1).getKey();
@@ -45,6 +45,65 @@ public class SecondandThirdMaxOccuranceOfCharacter {
 
 
     }
+
+    public static void solve2(String s){
+
+        String proc = s.toLowerCase().replace(" ", "");
+
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+
+        for (char ch : proc.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        if (map.size() < 3) {
+            System.out.println("Not Applicable");
+            return;
+        }
+
+        Character firstChar = null;
+        Character secondChar = null;
+        Character thirdChar = null;
+
+        int firstFreq = Integer.MIN_VALUE;
+        int secondFreq = Integer.MIN_VALUE;
+        int thirdFreq = Integer.MIN_VALUE;
+
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+
+            char currentChar = entry.getKey();
+            int currentFreq = entry.getValue();
+
+            if (currentFreq > firstFreq) {
+
+                thirdFreq = secondFreq;
+                thirdChar = secondChar;
+
+                secondFreq = firstFreq;
+                secondChar = firstChar;
+
+                firstFreq = currentFreq;
+                firstChar = currentChar;
+
+            } else if (currentFreq > secondFreq) {
+
+                thirdFreq = secondFreq;
+                thirdChar = secondChar;
+
+                secondFreq = currentFreq;
+                secondChar = currentChar;
+
+            } else if (currentFreq > thirdFreq) {
+
+                thirdFreq = currentFreq;
+                thirdChar = currentChar;
+            }
+        }
+
+        System.out.println(secondChar + "," + thirdChar);
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -97,8 +156,8 @@ public class SecondandThirdMaxOccuranceOfCharacter {
 //        Output: Not Applicable
 //*********************************/
 
-         String s="banana bread";
-         solve(s);
+         String s="aabbcc";
+         solve2(s);
 
 
     }
