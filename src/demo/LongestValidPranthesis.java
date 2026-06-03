@@ -41,7 +41,7 @@ public class LongestValidPranthesis {
 
     public static void main(String[] args) {
 
-        String s="\")()())\")";
+        String s="\")([]))\")";
          String ans=solve(s);
          System.out.println(ans);
 

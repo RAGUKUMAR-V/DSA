@@ -42,7 +42,7 @@ public class MaxSumOfArray {
 
         int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
         int[] arr1=  {5,4,-1,7,8};
-        int ans=solve(arr1);
+        int ans=solve(arr);
         System.out.println(ans);
     }
 }

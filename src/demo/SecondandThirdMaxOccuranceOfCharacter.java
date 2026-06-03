@@ -29,12 +29,6 @@ public class SecondandThirdMaxOccuranceOfCharacter {
         List<Map.Entry<Character, Integer>> list =
                 new ArrayList<>(map.entrySet());
 
-        /*
-         Sort by:
-         1. Higher frequency first
-         2. If same frequency, preserve insertion order
-            (LinkedHashMap already keeps first appearance order)
-        */
        list.sort((a, b) -> b.getValue() - a.getValue());
 
         // 2nd and 3rd most repeating characters

@@ -37,11 +37,11 @@ public class SubArraysForGivenArray {
         List<List<Integer>>ans2=solve2(lis);
 
         for(int[] an:ans){
-            System.out.println(Arrays.toString(an));
+            System.out.print(Arrays.toString(an));
         }
 
         for(List<Integer> an:ans2){
-            System.out.println((an));
+            System.out.print((an));
         }
 
     }
