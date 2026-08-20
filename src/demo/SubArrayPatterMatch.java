@@ -10,7 +10,6 @@ public class SubArrayPatterMatch {
             }
         }
 
-
     }
 
     public static void main(String[] args) {

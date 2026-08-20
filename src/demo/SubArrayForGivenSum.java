@@ -51,13 +51,13 @@ public class SubArrayForGivenSum {
 
     public static void main(String[] args) {
         int[] array={0,1,0,0,0,0,1,1,2,3,5,0,0,0,0,0,0,2,0,0,2};
-        int target=2;
+        int target=7;
         List<int[]> ans=solve(array,target);
         int maxlen=0;
         List<int[]>lis=new ArrayList<>();
         for(int[]an:ans){
 
-            if(an.length>maxlen || an.length==maxlen){
+            if(an.length>=maxlen){
                 lis.clear();
                 lis.add(an);
                 maxlen=an.length;

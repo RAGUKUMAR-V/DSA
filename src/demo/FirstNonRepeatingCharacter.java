@@ -35,7 +35,7 @@ public class FirstNonRepeatingCharacter {
 
         String str = " aAb   b Cdd e  ";
 
-        char result = solve(str,3);
+        char result = solve(str,2);
         System.out.println(result);    }
 
 }

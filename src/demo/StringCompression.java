@@ -16,7 +16,7 @@ public class StringCompression {
             int count=0;
 
             while(read<nums.length && nums[read]==currentchar){
-
+                //{'a','a','b','b','c','c','a'}
                 read++;
                 count++;
 
