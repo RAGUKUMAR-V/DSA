@@ -28,7 +28,7 @@ public class MoveZeroToEnd {
 
 
     public static void main(String[] args) {
-        int[] nums={0,1,0,3,12};
+        int[] nums={1,1,1,1,0,1,0,3,12};
        int[] anss= solve(nums);
        System.out.println(Arrays.toString(anss));
 
